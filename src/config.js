@@ -11,11 +11,7 @@ import HeroDark from "./images/hero-dark.jpg";
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
 
-/* START HERE
- **************************************************************
-  Add your GitHub username (string - "YourUsername") below.
-*/
-export const githubUsername = "Your GitHub username here";
+export const githubUsername = "RTHaskins";
 
 // Navbar Logo image
 export const navLogo = null;
@@ -108,10 +104,8 @@ export const projectCardImages = [
 
 /* Contact Info
  ************************************************************** 
-  Add your formspree endpoint below.
-  https://formspree.io/
 */
-export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+export const formspreeUrl = "https://formspree.io/f/meojbqvn";
 
 // Footer icons theme (light or dark)
 export const footerTheme = "dark";
