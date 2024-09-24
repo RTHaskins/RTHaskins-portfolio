@@ -8,6 +8,11 @@ import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 // Images
 import defaultLogo from "../images/defaultNavLogo.svg";
+import HomeSharpIcon from '@mui/icons-material/HomeSharp';
+import PersonSharpIcon from '@mui/icons-material/PersonSharp';
+import EngineeringSharpIcon from '@mui/icons-material/EngineeringSharp';
+import AccountTreeSharpIcon from '@mui/icons-material/AccountTreeSharp';
+import ContactPageSharpIcon from '@mui/icons-material/ContactPageSharp';
 // Components
 import { Link as ScrollLink } from "react-scroll";
 import { Container, Nav, Navbar } from "react-bootstrap";
@@ -20,11 +25,11 @@ const navLinks = {
     { id: "2R", name: "All Projects", route: "/All-Projects" },
   ],
   to: [
-    { id: "1T", name: "Home", to: "Home" },
-    { id: "2T", name: "About Me", to: "About" },
-    { id: "3T", name: "Skills", to: "Skills" },
-    { id: "4T", name: "Projects", to: "Projects" },
-    { id: "5T", name: "Contact", to: "Contact" },
+    { id: "1T", name: "Home", to: "Home", icon: <HomeSharpIcon className="pb-1 pe-1"/> },
+    { id: "2T", name: "About Me", to: "About", icon: <PersonSharpIcon className="pb-1 pe-1"/> },
+    { id: "3T", name: "Skills", to: "Skills", icon: <AccountTreeSharpIcon className="pb-1 pe-1"/> },
+    { id: "4T", name: "Projects", to: "Projects", icon: <EngineeringSharpIcon className="pb-1 pe-1"/> },
+    { id: "5T", name: "Contact", to: "Contact", icon: <ContactPageSharpIcon className="pb-1 pe-1"/> },
   ],
 };
 // #endregion
@@ -85,11 +90,11 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
             onClick={() => setisExpanded(!isExpanded)}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav navbarScroll className="me-auto">
+            <Nav navbarScroll className="ms-auto pe-5">
               {pathname === "/"
                 ? navLinks.to.map((el) => {
                     return (
-                      <Nav.Item key={el.id}>
+                      <Nav.Item key={el.id} className="pe-5">
                         <ScrollLink
                           to={el.to}
                           spy={true}
@@ -101,6 +106,7 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
                             }, closeDelay);
                           }}
                         >
+                          {el.icon}
                           {el.name}
                         </ScrollLink>
                       </Nav.Item>
