@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 import { selectMode } from "../app/appSlice";
 import PropTypes from "prop-types";
 // Icons
-import { Icon } from "@iconify/react";
+import LightModeSharpIcon from '@mui/icons-material/LightModeSharp';
+import DarkModeSharpIcon from '@mui/icons-material/DarkModeSharp';
 
 // #region styled-components
 const StyledSwitch = styled.label`
@@ -74,9 +75,9 @@ const ThemeToggle = ({ closeDelay = 250, setExpanded, setTheme }) => {
       />
       <div>
         {theme === "light" ? (
-          <Icon icon="game-icons:sunflower" />
+          <LightModeSharpIcon/>
         ) : (
-          <Icon icon="game-icons:moon" />
+          <DarkModeSharpIcon/>
         )}
       </div>
     </StyledSwitch>
