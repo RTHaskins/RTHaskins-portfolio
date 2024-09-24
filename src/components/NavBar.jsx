@@ -74,6 +74,7 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
         bg={theme === "light" ? "light" : "dark"}
         variant={theme === "light" ? "light" : "dark"}
         fixed="top"
+        style={{paddingBottom: '5px'}}
       >
         <Container>
           <Navbar.Brand>
@@ -107,7 +108,7 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
                           }}
                         >
                           {el.icon}
-                          <text style={{fontFamily: 'Lucida Console'}}>{el.name}</text>
+                          <span style={{fontFamily: 'Lucida Console'}}>{el.name}</span>
                         </ScrollLink>
                       </Nav.Item>
                     );
@@ -129,13 +130,13 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
                           }}
                         >
                           {el.icon}
-                          <text style={{fontFamily: 'Lucida Console'}}>{el.name}</text>
+                          <p style={{fontFamily: 'Lucida Console'}}>{el.name}</p>
                         </Link>
                       </Nav.Item>
                     );
                   })}
             </Nav>
-            <Nav>
+            <Nav style={{paddingBottom: '5px'}}>
               <ThemeToggle
                 closeDelay={closeDelay}
                 setExpanded={setisExpanded}
