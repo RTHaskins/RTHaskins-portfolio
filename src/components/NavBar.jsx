@@ -21,8 +21,8 @@ import ThemeToggle from "./ThemeToggle";
 // #region constants
 const navLinks = {
   routes: [
-    { id: "1R", name: "Home", route: "/" },
-    { id: "2R", name: "All Projects", route: "/All-Projects" },
+    { id: "1R", name: "Home", route: "/", icon: <HomeSharpIcon className="pb-1 pe-1"/> },
+    { id: "2R", name: "All Projects", route: "/All-Projects", icon: <EngineeringSharpIcon className="pb-1 pe-1"/> },
   ],
   to: [
     { id: "1T", name: "Home", to: "Home", icon: <HomeSharpIcon className="pb-1 pe-1"/> },
@@ -107,14 +107,14 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
                           }}
                         >
                           {el.icon}
-                          {el.name}
+                          <text style={{fontFamily: 'Lucida Console'}}>{el.name}</text>
                         </ScrollLink>
                       </Nav.Item>
                     );
                   })
                 : navLinks.routes.map((el) => {
                     return (
-                      <Nav.Item key={el.id}>
+                      <Nav.Item key={el.id} className="pe-5">
                         <Link
                           to={el.route}
                           className={
@@ -128,7 +128,8 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
                             }, closeDelay);
                           }}
                         >
-                          {el.name}
+                          {el.icon}
+                          <text style={{fontFamily: 'Lucida Console'}}>{el.name}</text>
                         </Link>
                       </Nav.Item>
                     );

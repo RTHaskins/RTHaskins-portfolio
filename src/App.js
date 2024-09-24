@@ -31,6 +31,7 @@ import Footer from "./components/Footer";
 import { footerTheme, navLogo } from "./config";
 // Util
 import { getStoredTheme, getPreferredTheme, setTheme } from "./utils";
+import "./style.css";
 
 // #region component
 const propTypes = {
