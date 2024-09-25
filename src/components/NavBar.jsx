@@ -130,7 +130,7 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
                           }}
                         >
                           {el.icon}
-                          <p style={{fontFamily: 'Lucida Console'}}>{el.name}</p>
+                          <span style={{fontFamily: 'Lucida Console'}}>{el.name}</span>
                         </Link>
                       </Nav.Item>
                     );

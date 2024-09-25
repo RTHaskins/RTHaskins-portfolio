@@ -4,9 +4,9 @@ import styled, { keyframes } from "styled-components";
 // State
 import PropTypes from "prop-types";
 // Icons
-import { Icon } from "@iconify/react";
+import ArrowDropDownCircleSharpIcon from '@mui/icons-material/ArrowDropDownCircleSharp';
 // Images
-import Logo from "../images/logo.svg";
+import Logo from "../images/425-4258668_lordfarquaad-farquaad-markiplier-e-markiplier-meme-lord-farquaad.png";
 import { Light, Dark } from "../config";
 // Components
 import { useErrorBoundary } from "react-error-boundary";
@@ -63,6 +63,10 @@ const StyledHero = styled.header`
 
   .down-container {
     height: 10rem;
+  }
+
+  .down-column {
+    padding-top: 13rem;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -122,9 +126,9 @@ const Hero = ({ name }) => {
           </Col>
         </Row>
         <Row className="align-items-end down-container">
-          <Col className="m-4 text-center">
+          <Col className="m-4 text-center down-column">
             <Link to={"About"} className="link-icons">
-              <Icon icon="fa6-solid:circle-chevron-down" />
+              <ArrowDropDownCircleSharpIcon style={{width: 50, height: 50}}/>
             </Link>
           </Col>
         </Row>

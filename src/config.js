@@ -5,8 +5,8 @@ import { Icon } from "@iconify/react";
 import newLogo from "./images/425-4258668_lordfarquaad-farquaad-markiplier-e-markiplier-meme-lord-farquaad.png";
 
 // Hero Images (add your images to the /images directory with the same names)
-import HeroLight from "./images/hero-light.jpg";
-import HeroDark from "./images/hero-dark.jpg";
+import HeroLight from "./images/light.jpg";
+import HeroDark from "./images/dark.jpg";
 
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
@@ -20,7 +20,7 @@ export const navLogo = newLogo;
  ************************************************************** 
   Add a custom blog icon or update the hero images for the Main section.
 */
-export const Blog = <Icon icon="ph:link-bold" />;;
+export const Blog = <Icon icon="ph:link-bold"/>;
 
 // Hero images (imported above - lines 8-9)
 export { HeroLight as Light };
