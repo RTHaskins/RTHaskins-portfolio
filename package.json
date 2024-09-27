@@ -25,6 +25,7 @@
     "react-scroll": "^1.8.7",
     "sass": "^1.77.6",
     "styled-components": "^6.1.11",
+    "typewriter-effect": "^2.21.0",
     "workbox-core": "^7.1.0",
     "workbox-expiration": "^7.1.0",
     "workbox-precaching": "^7.1.0",

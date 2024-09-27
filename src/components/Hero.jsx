@@ -1,28 +1,18 @@
 import React from "react";
 // Styles
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 // State
 import PropTypes from "prop-types";
 // Icons
 import ArrowDropDownCircleSharpIcon from '@mui/icons-material/ArrowDropDownCircleSharp';
 // Images
-import Logo from "../images/425-4258668_lordfarquaad-farquaad-markiplier-e-markiplier-meme-lord-farquaad.png";
 import { Light, Dark } from "../config";
 // Components
 import { useErrorBoundary } from "react-error-boundary";
 import { Link } from "react-scroll";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import SocialLinks from "./SocialLinks";
-
-// #region styled-components
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
+import Typewriter from "typewriter-effect";
 
 const StyledHero = styled.header`
   position: relative;
@@ -66,13 +56,12 @@ const StyledHero = styled.header`
   }
 
   .down-column {
-    padding-top: 13rem;
+    padding-top: 20rem;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .hero-img {
-      animation: ${spin} infinite 20s linear;
-    }
+  .icon-size {
+    height: 50px;
+    width: 50px;
   }
 
   @media screen and (min-width: 1180px) {
@@ -110,25 +99,44 @@ const Hero = ({ name }) => {
       <Container>
         <Row className="align-items-center text-center">
           <Col>
+            <h1 className="display-3 title">
+              {"Hello there! "}
+              <span role="img" aria-labelledby="wave">
+                👋🏻
+              </span>
+            </h1>
             <h1 className="mb-3 display-3 title">
-              {name === null ? "null" : name}
+              {"I'm"} {name === null ? "null" : name}
             </h1>
             <div className="d-flex align-items-center justify-content-center">
               <SocialLinks />
             </div>
           </Col>
           <Col className="d-none d-md-block">
-            <img
-              src={Logo}
-              alt="React Logo"
-              className="w-75 mx-auto hero-img"
+            <h1 className="mb-3 display-3 title">
+              {"I'm a"}
+            </h1>
+            <Typewriter
+              options={{
+                strings: [
+                  "Software Developer",
+                  "Web Developer",
+                  "Full Stack Developer",
+                  "UI/UX Designer",
+                  "Dev Team Lead",
+                  "Game Developer/Designer",
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+              }}
             />
           </Col>
         </Row>
         <Row className="align-items-end down-container">
           <Col className="m-4 text-center down-column">
             <Link to={"About"} className="link-icons">
-              <ArrowDropDownCircleSharpIcon style={{width: 50, height: 50}}/>
+              <ArrowDropDownCircleSharpIcon className="icon-size"/>
             </Link>
           </Col>
         </Row>
