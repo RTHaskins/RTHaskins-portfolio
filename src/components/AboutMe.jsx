@@ -12,6 +12,7 @@ import Title from "./Title";
 const StyledAboutMe = styled.section`
   p {
     font-size: 1.25rem;
+    font-family: 'Lucida Console';
   }
   .img {
     width: 18rem;

@@ -28,10 +28,12 @@ export { HeroDark as Dark };
 
 /* About Me
  **************************************************************
-  Add a second paragraph for the about me section.
+  Add paragraphs for the about me section.
 */
+export const aboutMe =
+  "Hello there thanks for stopping by! I'm Ryan, a software developer with a Bachelor's degree in Computing Science and a certificate in Computer Game Development from the University of Alberta.";
 export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+  "I enjoy learning anything technology, programming and game development. It's always been a dream of mine to work with computers and create my own video games. I've built web application and video games using various technologies and tools such as Unity, React and Django. I'm always looking for new opportunities to learn and grow as a developer.";
 
 /* Skills
  ************************************************************** 

@@ -4,20 +4,25 @@ import styled from "styled-components";
 // State
 import PropTypes from "prop-types";
 // Icons
-import { Icon } from "@iconify/react";
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 // Components
 import { Link } from "react-scroll";
 
 // #region styled-components
 const StyledDiv = styled.div`
   position: fixed;
-  bottom: calc(var(--min-footer-height) + 1.5rem);
+  bottom: calc(var(--min-footer-height) - 1.5rem);
   right: 1.5rem;
   visibility: hidden;
   z-index: 2;
 
   .link-icons {
     color: ${({ theme }) => (theme.name === "light" ? "#45413C" : "#F5F2E8")};
+  }
+
+  .icon-size {
+    height: 50px;
+    width: 50px;
   }
 
   &.show-up {
@@ -50,7 +55,7 @@ const BackToTop = ({ home = "Home" }) => {
   return (
     <StyledDiv ref={up}>
       <Link to={home} className="link-icons">
-        <Icon icon="fa6-solid:circle-chevron-up" />
+        <ArrowCircleUpIcon className="icon-size"/>
       </Link>
     </StyledDiv>
   );

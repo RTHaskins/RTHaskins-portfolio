@@ -4,7 +4,7 @@ import styled from "styled-components";
 // State
 import PropTypes from "prop-types";
 // Icons
-import ArrowDropDownCircleSharpIcon from '@mui/icons-material/ArrowDropDownCircleSharp';
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 // Images
 import { Light, Dark } from "../config";
 // Components
@@ -136,7 +136,7 @@ const Hero = ({ name }) => {
         <Row className="align-items-end down-container">
           <Col className="m-4 text-center down-column">
             <Link to={"About"} className="link-icons">
-              <ArrowDropDownCircleSharpIcon className="icon-size"/>
+              <ArrowCircleDownIcon className="icon-size"/>
             </Link>
           </Col>
         </Row>
