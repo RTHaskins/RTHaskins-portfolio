@@ -13,6 +13,8 @@ import Logo from "./images/logo.svg";
 
 import Picture from "./images/image.jpg";
 
+import Resume from "./images/RyanHaskinsResume.pdf";
+
 export const githubUsername = "RTHaskins";
 
 // Navbar Logo image
@@ -46,53 +48,113 @@ export const moreInfo =
 export const skillData = [
   {
     id: 1,
+    skill: <Icon icon="fa6-brands:java" className="display-4" />,
+    name: "Java",
+  },
+  {
+    id: 2,
+    skill: <Icon icon="fa6-brands:python" className="display-4" />,
+    name: "Python",
+  },
+  {
+    id: 3,
+    skill: <Icon icon="devicon-plain:django" className="display-4" />,
+    name: "Django",
+  },
+  {
+    id: 4,
+    skill: <Icon icon="devicon-plain:c" className="display-4" />,
+    name: "C",
+  },
+  {
+    id: 5,
+    skill: <Icon icon="devicon-plain:cplusplus" className="display-4" />,
+    name: "C++",
+  },
+  {
+    id: 6,
+    skill: <Icon icon="devicon-plain:csharp" className="display-4" />,
+    name: "C#",
+  },
+  {
+    id: 7,
+    skill: <Icon icon="devicon-plain:unity" className="display-4" />,
+    name: "Unity",
+  },
+  {
+    id: 8,
+    skill: <Icon icon="devicon-plain:intellij" className="display-4" />,
+    name: "IntelliJ",
+  },
+  {
+    id: 9,
+    skill: <Icon icon="devicon-plain:postgresql" className="display-4" />,
+    name: "PostgreSQL",
+  },
+  {
+    id: 10,
     skill: <Icon icon="mdi:language-html5" className="display-4" />,
     name: "HTML5",
   },
   {
-    id: 2,
+    id: 11,
     skill: <Icon icon="ion:logo-css3" className="display-4" />,
     name: "CSS3",
   },
   {
-    id: 3,
+    id: 12,
     skill: <Icon icon="fa6-brands:js" className="display-4" />,
     name: "JavaScript",
   },
   {
-    id: 4,
+    id: 13,
+    skill: <Icon icon="devicon-plain:typescript" className="display-4" />,
+    name: "TypeScript",
+  },
+  {
+    id: 14,
     skill: <Icon icon="ri:bootstrap-fill" className="display-4" />,
     name: "BootStrap",
   },
   {
-    id: 5,
+    id: 15,
     skill: <Icon icon="mdi:react" className="display-4" />,
     name: "React",
   },
   {
-    id: 6,
+    id: 16,
     skill: <Icon icon="file-icons:styledcomponents" className="display-4" />,
     name: "Styled Components",
   },
   {
-    id: 7,
+    id: 17,
     skill: <Icon icon="akar-icons:redux-fill" className="display-4" />,
     name: "Redux",
   },
   {
-    id: 8,
+    id: 18,
+    skill: <Icon icon="simple-icons:robotframework" className="display-4" />,
+    name: "ROBOT Framework",
+  },
+  {
+    id: 19,
     skill: <Icon icon="bi:git" className="display-4" />,
     name: "Git",
   },
   {
-    id: 9,
+    id: 20,
     skill: <Icon icon="fa6-brands:square-github" className="display-4" />,
     name: "GitHub",
+  },
+  {
+    id: 21,
+    skill: <Icon icon="fa6-brands:gitlab" className="display-4" />,
+    name: "GitLab",
   },
 ];
 
 // Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
-export const resume = null;
+export const resume = Resume;
 
 /* Projects
  ************************************************************** 

@@ -9,6 +9,24 @@ import Title from "./Title";
 // Config
 import { skillData, resume } from "../config";
 
+const handleDownload = () => {
+  // Create a link element
+  const downloadLink = document.createElement("a");
+  downloadLink.href = resume; // URL of the PDF in the images folder
+
+  // Set the download attribute with the desired file name
+  downloadLink.download = "RyanHaskinsResume.pdf";
+
+  // Append the link to the document
+  document.body.appendChild(downloadLink);
+
+  // Trigger a click on the link to start the download
+  downloadLink.click();
+
+  // Remove the link from the document
+  document.body.removeChild(downloadLink);
+};
+
 // #region component
 const Skills = () => {
   const theme = useSelector(selectMode);
@@ -33,15 +51,14 @@ const Skills = () => {
             })}
           </Row>
           {resume && (
-            <a href={resume}>
-              <Button
-                size="lg"
-                variant={theme === "light" ? "outline-dark" : "outline-light"}
-                className="mt-5"
-              >
-                R&eacute;sum&eacute;
-              </Button>
-            </a>
+            <Button
+              onClick={handleDownload}
+              size="lg"
+              variant={theme === "light" ? "outline-dark" : "outline-light"}
+              className="mt-5"
+            >
+              Resume
+            </Button>
           )}
         </Container>
       </section>
