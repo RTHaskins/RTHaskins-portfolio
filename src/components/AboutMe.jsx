@@ -23,12 +23,12 @@ const StyledAboutMe = styled.section`
 
 // #region component
 const propTypes = {
-  avatar_url: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
   bio: PropTypes.string,
   moreInfo: PropTypes.string,
 };
 
-const AboutMe = ({ avatar_url, bio, moreInfo }) => {
+const AboutMe = ({ avatar, bio, moreInfo }) => {
   return (
     <Element name={"About"} id="about">
       <StyledAboutMe className="section">
@@ -45,11 +45,11 @@ const AboutMe = ({ avatar_url, bio, moreInfo }) => {
             </Col>
             <Col className="d-none d-md-block text-center">
               <img
-                src={avatar_url}
-                alt="GitHub Avatar"
+                src={avatar}
+                alt="Profile Avatar"
                 loading="lazy"
                 className="mx-auto rounded-circle border border-primary-subtle"
-                style={{ width: "15rem", height: "15rem" }}
+                style={{ width: "20rem", height: "25rem" }}
               />
             </Col>
           </Row>

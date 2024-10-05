@@ -11,10 +11,14 @@ import HeroDark from "./images/dark.jpg";
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
 
+import Picture from "./images/image.jpg";
+
 export const githubUsername = "RTHaskins";
 
 // Navbar Logo image
 export const navLogo = newLogo;
+
+export const profileAvatar = Picture;
 
 /* Main
  ************************************************************** 
